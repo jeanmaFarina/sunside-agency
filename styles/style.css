@@ -55,7 +55,7 @@ header .creative img {
 .main-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(7, 1fr);
+  grid-template-rows: 800px 600px 600px 600px 600px 700px 300px;
   grid-template-areas: "header header header header" "el1 el1 el2 el2" "el3 el3 el4 el4" "el5 el5 el6 el6" "test test test test" "el7 el8 el9 el10" "footer footer footer footer";
 }
 .main-grid .grid-text, .main-grid .grid-item-4, .main-grid .grid-item-1 {
@@ -117,6 +117,41 @@ header .creative img {
 .main-grid footer {
   grid-area: footer;
   background-color: #458c7e;
+}
+.main-grid .testimony {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+.main-grid .testimony h2 {
+  font-family: "Fraunces", serif;
+  color: #a7abae;
+  text-align: center;
+}
+.main-grid .testimony .testimony-items {
+  display: flex;
+  flex-direction: row;
+}
+.main-grid .testimony .testimony-items .testimony-item {
+  margin: 30px;
+}
+.main-grid .testimony .testimony-items .testimony-item img {
+  width: 70px;
+  border-radius: 50%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.main-grid .testimony .testimony-items .testimony-item p {
+  color: #818498;
+  font-weight: bold;
+}
+.main-grid .testimony .testimony-items .testimony-item .name {
+  font-family: "Fraunces", serif;
+  color: black;
+}
+.main-grid .testimony .testimony-items .testimony-item .role {
+  margin: 20px;
+  color: #818498;
 }
 
 /*# sourceMappingURL=style.css.map */
