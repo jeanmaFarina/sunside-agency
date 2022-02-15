@@ -23,7 +23,10 @@ header nav {
   justify-content: flex-end;
 }
 header nav img {
-  margin: 10px 10px 20px 20px;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  height: 20px;
 }
 header nav p {
   margin-left: 20px;
@@ -48,6 +51,7 @@ header .creative p {
 }
 header .creative img {
   width: 30px;
+  margin-top: 90px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -63,6 +67,35 @@ header .creative img {
   display: flex;
   justify-content: center;
   flex-direction: column;
+  margin-left: 15%;
+  margin-right: 10%;
+}
+.main-grid .grid-text h1, .main-grid .grid-item-4 h1, .main-grid .grid-item-1 h1 {
+  font-family: "Fraunces", serif;
+  color: #5a636c;
+}
+.main-grid .grid-text p, .main-grid .grid-item-4 p, .main-grid .grid-item-1 p {
+  color: #a7abae;
+}
+.main-grid .grid-text a, .main-grid .grid-item-4 a, .main-grid .grid-item-1 a {
+  margin-top: 30px;
+  font-size: 20px;
+  font-family: "Fraunces", serif;
+  text-decoration: none;
+  color: #23303e;
+}
+.main-grid .grid-image-text, .main-grid .grid-item-6, .main-grid .grid-item-5 {
+  text-align: center;
+}
+.main-grid .grid-image-text h1, .main-grid .grid-item-6 h1, .main-grid .grid-item-5 h1 {
+  margin-top: 440px;
+  font-family: "Fraunces", serif;
+  color: #23303e;
+}
+.main-grid .grid-image-text p, .main-grid .grid-item-6 p, .main-grid .grid-item-5 p {
+  margin-left: 200px;
+  margin-right: 200px;
+  color: #25564b;
 }
 .main-grid .grid-item-1 {
   grid-area: el1;
