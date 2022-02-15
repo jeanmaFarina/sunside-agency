@@ -3,7 +3,6 @@ html
   height: 100%
 body
   font-family: 'Barlow', sans-serif
-
   margin: 0
   padding: 0
 
@@ -12,8 +11,8 @@ header
   grid-area: header
   background-size: cover
   background-position: center bottom
-  width: 100%
-  height: 100%
+
+
   font-family: 'Barlow', sans-serif
   nav
     display: flex
@@ -50,20 +49,22 @@ header
   grid-template-areas: "header header header header" "el1 el1 el2 el2" "el3 el3 el4 el4" "el5 el5 el6 el6" "test test test test" "el7 el8 el9 el10" "footer footer footer footer"
   .grid-text
     background-color: $white
-    text-align: center
+    display: flex
+    justify-content: center
+    flex-direction: column
   .grid-item-1
     grid-area: el1
     @extend .grid-text
   .grid-item-2
     grid-area: el2
-    background-image: url(../images/desktop/image-transform.jpg)
+    background-image: url("../images/desktop/image-transform.jpg")
     background-position: center
   .grid-item-3
     grid-area: el3
-    background-image: url(../images/desktop/image-stand-out.jpg)
+    background-image: url("../images/desktop/image-stand-out.jpg")
     background-position: center
   .grid-item-4
-    grid-area: el1
+    grid-area: el4
     @extend .grid-text
   .grid-item-5
     grid-area: el5

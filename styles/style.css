@@ -15,8 +15,6 @@ header {
   grid-area: header;
   background-size: cover;
   background-position: center bottom;
-  width: 100%;
-  height: 100%;
   font-family: "Barlow", sans-serif;
 }
 header nav {
@@ -62,23 +60,25 @@ header .creative img {
 }
 .main-grid .grid-text, .main-grid .grid-item-4, .main-grid .grid-item-1 {
   background-color: white;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 .main-grid .grid-item-1 {
   grid-area: el1;
 }
 .main-grid .grid-item-2 {
   grid-area: el2;
-  background-image: url(../images/desktop/image-transform.jpg);
+  background-image: url("../images/desktop/image-transform.jpg");
   background-position: center;
 }
 .main-grid .grid-item-3 {
   grid-area: el3;
-  background-image: url(../images/desktop/image-stand-out.jpg);
+  background-image: url("../images/desktop/image-stand-out.jpg");
   background-position: center;
 }
 .main-grid .grid-item-4 {
-  grid-area: el1;
+  grid-area: el4;
 }
 .main-grid .grid-item-5 {
   grid-area: el5;
