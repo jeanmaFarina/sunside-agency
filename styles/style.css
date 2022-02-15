@@ -1,0 +1,122 @@
+/*primary*/
+/*neutral*/
+html {
+  height: 100%;
+}
+
+body {
+  font-family: "Barlow", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-image: url("../images/desktop/image-header.jpg");
+  grid-area: header;
+  background-size: cover;
+  background-position: center bottom;
+  width: 100%;
+  height: 100%;
+  font-family: "Barlow", sans-serif;
+}
+header nav {
+  display: flex;
+  color: white;
+  justify-content: flex-end;
+}
+header nav img {
+  margin: 10px 10px 20px 20px;
+}
+header nav p {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+header nav .space {
+  margin-right: auto;
+  margin-left: auto;
+}
+header .creative {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+header .creative p {
+  font-family: "Fraunces", serif;
+  margin: 30px;
+  font-size: 30px;
+  color: white;
+}
+header .creative img {
+  width: 30px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.main-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(7, 1fr);
+  grid-template-areas: "header header header header" "el1 el1 el2 el2" "el3 el3 el4 el4" "el5 el5 el6 el6" "test test test test" "el7 el8 el9 el10" "footer footer footer footer";
+}
+.main-grid .grid-text, .main-grid .grid-item-4, .main-grid .grid-item-1 {
+  background-color: white;
+  text-align: center;
+}
+.main-grid .grid-item-1 {
+  grid-area: el1;
+}
+.main-grid .grid-item-2 {
+  grid-area: el2;
+  background-image: url(../images/desktop/image-transform.jpg);
+  background-position: center;
+}
+.main-grid .grid-item-3 {
+  grid-area: el3;
+  background-image: url(../images/desktop/image-stand-out.jpg);
+  background-position: center;
+}
+.main-grid .grid-item-4 {
+  grid-area: el1;
+}
+.main-grid .grid-item-5 {
+  grid-area: el5;
+  background-image: url("../images/desktop/image-graphic-design.jpg");
+  background-position: center;
+}
+.main-grid .grid-item-6 {
+  grid-area: el6;
+  background-image: url("../images/desktop/image-photography.jpg");
+  background-position: center;
+}
+.main-grid .testimony {
+  grid-area: test;
+  text-align: center;
+}
+.main-grid .bottom-grid-1 {
+  grid-area: el7;
+  background-image: url("../images/desktop/image-gallery-milkbottles.jpg");
+  background-position: center;
+}
+.main-grid .bottom-grid-2 {
+  grid-area: el8;
+  background-image: url("../images/desktop/image-gallery-orange.jpg");
+  background-position: center;
+}
+.main-grid .bottom-grid-3 {
+  grid-area: el9;
+  background-image: url("../images/desktop/image-gallery-cone.jpg");
+  background-position: center;
+}
+.main-grid .bottom-grid-4 {
+  grid-area: el10;
+  background-image: url("../images/desktop/image-gallery-sugarcubes.jpg");
+  background-position: center;
+}
+.main-grid footer {
+  grid-area: footer;
+  background-color: #458c7e;
+}
+
+/*# sourceMappingURL=style.css.map */
