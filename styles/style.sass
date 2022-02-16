@@ -6,13 +6,12 @@ body
   margin: 0
   padding: 0
 
+
 header
   background-image: url("../images/desktop/image-header.jpg")
   grid-area: header
   background-size: cover
   background-position: center bottom
-
-
   font-family: 'Barlow', sans-serif
   nav
     display: flex
@@ -50,6 +49,7 @@ header
   display: grid
   grid-template-columns: repeat(4, 1fr)
   grid-template-rows: 800px 600px 600px 600px 600px 700px 300px
+
   grid-template-areas: "header header header header" "el1 el1 el2 el2" "el3 el3 el4 el4" "el5 el5 el6 el6" "test test test test" "el7 el8 el9 el10" "footer footer footer footer"
   .grid-text
     background-color: $white
@@ -73,24 +73,28 @@ header
   .grid-image-text
     text-align: center
     h1
-      margin-top: 440px
+      margin-top: 13em
       font-family: "Fraunces", serif
       color: $very_dark_desaturated_blue
     p
-      margin-left: 200px
-      margin-right: 200px
+      margin-left: 20%
+      margin-right: 20%
       color: $dark_desaturated_cyan
+  .grid-image
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: center
   .grid-item-1
     grid-area: el1
     @extend .grid-text
   .grid-item-2
     grid-area: el2
     background-image: url("../images/desktop/image-transform.jpg")
-    background-position: center
+    @extend .grid-image
   .grid-item-3
     grid-area: el3
     background-image: url("../images/desktop/image-stand-out.jpg")
-    background-position: center
+    @extend .grid-image
   .grid-item-4
     grid-area: el4
     @extend .grid-text
@@ -103,26 +107,26 @@ header
     @extend .grid-image-text
     grid-area: el6
     background-image: url("../images/desktop/image-photography.jpg")
-    background-position: center
+    @extend .grid-image
   .testimony
     grid-area: test
     text-align: center
   .bottom-grid-1
     grid-area: el7
     background-image: url("../images/desktop/image-gallery-milkbottles.jpg")
-    background-position: center
+    @extend .grid-image
   .bottom-grid-2
     grid-area: el8
     background-image: url("../images/desktop/image-gallery-orange.jpg")
-    background-position: center
+    @extend .grid-image
   .bottom-grid-3
     grid-area: el9
     background-image: url("../images/desktop/image-gallery-cone.jpg")
-    background-position: center
+    @extend .grid-image
   .bottom-grid-4
     grid-area: el10
     background-image: url("../images/desktop/image-gallery-sugarcubes.jpg")
-    background-position: center
+    @extend .grid-image
   footer
     grid-area: footer
     background-color: $dark_moderate_cyan
@@ -148,6 +152,40 @@ header
         margin: 30px
     img
       width: 30px
+  @media screen and (min-width: 375px)
+    .testimony
+      display: flex
+      justify-content: space-around
+      flex-direction: column
+      h2
+        font-family: "Fraunces", serif
+        color: $grayish_blue
+        text-align: center
+      .testimony-items
+        display: flex
+        flex-direction: row
+        .testimony-item
+          margin: 30px
+          img
+            width: 70px
+            border-radius: 50%
+            margin-top: 50px
+            margin-bottom: 50px
+          p
+            color: $dark_grayish_blue
+            font-weight: bold
+          .name
+            font-family: 'Fraunces', serif
+            color: black
+          .role
+            margin: 20px
+            color: $dark_grayish_blue
+@media screen and (max-width: 375px)
+  .main-grid
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    grid-template-rows: 800px 600px 600px 600px 600px 600px 600px 600px 350px 350px 600px 600px 150px
+    grid-template-areas: "header header" "el1 el1" "el2 el2" "el3 el3" "el4 el4" "el5 el5" "el6 el6" "test test" "test test" "el7 el8" "el9 el10" "footer footer" "footer footer"
   .testimony
     display: flex
     justify-content: space-around
@@ -158,20 +196,23 @@ header
       text-align: center
     .testimony-items
       display: flex
-      flex-direction: row
+      flex-direction: column
       .testimony-item
-        margin: 30px
+        margin: 0
         img
           width: 70px
           border-radius: 50%
-          margin-top: 50px
-          margin-bottom: 50px
+          margin-top: 20px
+          margin-bottom: 20px
         p
           color: $dark_grayish_blue
           font-weight: bold
+          margin-left: 20px
+          margin-right: 20px
         .name
           font-family: 'Fraunces', serif
           color: black
         .role
           margin: 20px
           color: $dark_grayish_blue
+/*@media screen and (max-width: 1440px)*/
