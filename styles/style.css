@@ -14,27 +14,33 @@ header {
   background-image: url("../images/desktop/image-header.jpg");
   grid-area: header;
   background-size: cover;
+  background-repeat: no-repeat;
   background-position: center bottom;
   font-family: "Barlow", sans-serif;
 }
-header nav {
-  display: flex;
-  color: white;
-  justify-content: flex-end;
-}
-header nav img {
-  margin-top: 20px;
-  margin-left: 20px;
-  margin-right: 20px;
-  height: 20px;
-}
-header nav p {
-  margin-left: 20px;
-  margin-right: 20px;
-}
-header nav .space {
-  margin-right: auto;
-  margin-left: auto;
+@media screen and (min-width: 376px) {
+  header nav {
+    display: flex;
+    color: white;
+    justify-content: flex-end;
+  }
+  header nav img {
+    margin-top: 9px;
+    margin-left: 1%;
+    margin-right: 1%;
+    height: 20px;
+  }
+  header nav p {
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+  header nav .space {
+    margin-right: auto;
+    margin-left: auto;
+  }
+  header nav input, header nav label, header nav ul {
+    display: none;
+  }
 }
 header .creative {
   display: flex;
@@ -50,16 +56,17 @@ header .creative p {
   color: white;
 }
 header .creative img {
-  width: 30px;
-  margin-top: 90px;
+  width: 40px;
+  margin-top: 40px;
   margin-right: auto;
   margin-left: auto;
+  margin-bottom: 100px;
 }
 
 .main-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 800px 600px 600px 600px 600px 700px 300px;
+  grid-template-columns: repeat(4, 25%);
+  grid-template-rows: repeat(7, auto);
   grid-template-areas: "header header header header" "el1 el1 el2 el2" "el3 el3 el4 el4" "el5 el5 el6 el6" "test test test test" "el7 el8 el9 el10" "footer footer footer footer";
 }
 .main-grid .grid-text, .main-grid .grid-item-4, .main-grid .grid-item-1 {
@@ -67,8 +74,14 @@ header .creative img {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  margin-left: 15%;
-  margin-right: 10%;
+  padding-left: 15%;
+  padding-right: 10%;
+  padding-bottom: 10%;
+}
+@media screen and (max-width: 376px) {
+  .main-grid .grid-text, .main-grid .grid-item-4, .main-grid .grid-item-1 {
+    text-align: center;
+  }
 }
 .main-grid .grid-text h1, .main-grid .grid-item-4 h1, .main-grid .grid-item-1 h1 {
   font-family: "Fraunces", serif;
@@ -79,16 +92,33 @@ header .creative img {
 }
 .main-grid .grid-text a, .main-grid .grid-item-4 a, .main-grid .grid-item-1 a {
   margin-top: 30px;
-  font-size: 20px;
   font-family: "Fraunces", serif;
   text-decoration: none;
   color: #23303e;
 }
+.main-grid .grid-text a hr, .main-grid .grid-item-4 a hr, .main-grid .grid-item-1 a hr {
+  width: 65px;
+  border: none;
+  padding: 6px;
+  border-radius: 12px;
+  margin-top: -7px;
+  background-color: yellow;
+  opacity: 0.4;
+}
+@media screen and (min-width: 376px) {
+  .main-grid .grid-text a hr, .main-grid .grid-item-4 a hr, .main-grid .grid-item-1 a hr {
+    margin-right: auto;
+    margin-left: 0;
+  }
+}
 .main-grid .grid-image-text, .main-grid .grid-item-6, .main-grid .grid-item-5 {
   text-align: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 .main-grid .grid-image-text h1, .main-grid .grid-item-6 h1, .main-grid .grid-item-5 h1 {
-  margin-top: 13em;
+  margin-top: 12em;
   font-family: "Fraunces", serif;
   color: #23303e;
 }
@@ -97,21 +127,18 @@ header .creative img {
   margin-right: 20%;
   color: #25564b;
 }
-.main-grid .grid-image, .main-grid .bottom-grid-4, .main-grid .bottom-grid-3, .main-grid .bottom-grid-2, .main-grid .bottom-grid-1, .main-grid .grid-item-6, .main-grid .grid-item-3, .main-grid .grid-item-2 {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+.main-grid .grid-image img, .main-grid .bottom-grid-4 img, .main-grid .bottom-grid-3 img, .main-grid .bottom-grid-2 img, .main-grid .bottom-grid-1 img, .main-grid .grid-item-6 img, .main-grid .grid-item-3 img, .main-grid .grid-item-2 img {
+  width: 100%;
+  height: 100%;
 }
 .main-grid .grid-item-1 {
   grid-area: el1;
 }
 .main-grid .grid-item-2 {
   grid-area: el2;
-  background-image: url("../images/desktop/image-transform.jpg");
 }
 .main-grid .grid-item-3 {
   grid-area: el3;
-  background-image: url("../images/desktop/image-stand-out.jpg");
 }
 .main-grid .grid-item-4 {
   grid-area: el4;
@@ -131,19 +158,15 @@ header .creative img {
 }
 .main-grid .bottom-grid-1 {
   grid-area: el7;
-  background-image: url("../images/desktop/image-gallery-milkbottles.jpg");
 }
 .main-grid .bottom-grid-2 {
   grid-area: el8;
-  background-image: url("../images/desktop/image-gallery-orange.jpg");
 }
 .main-grid .bottom-grid-3 {
   grid-area: el9;
-  background-image: url("../images/desktop/image-gallery-cone.jpg");
 }
 .main-grid .bottom-grid-4 {
   grid-area: el10;
-  background-image: url("../images/desktop/image-gallery-sugarcubes.jpg");
 }
 .main-grid footer {
   grid-area: footer;
@@ -157,6 +180,7 @@ header .creative img {
   width: 150px;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 3em;
 }
 .main-grid footer .logo-link {
   display: flex;
@@ -177,7 +201,7 @@ header .creative img {
 .main-grid footer img {
   width: 30px;
 }
-@media screen and (min-width: 375px) {
+@media screen and (min-width: 376px) {
   .main-grid .testimony {
     display: flex;
     justify-content: space-around;
@@ -193,7 +217,7 @@ header .creative img {
     flex-direction: row;
   }
   .main-grid .testimony .testimony-items .testimony-item {
-    margin: 30px;
+    margin: 2%;
   }
   .main-grid .testimony .testimony-items .testimony-item img {
     width: 70px;
@@ -219,8 +243,8 @@ header .creative img {
   .main-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 800px 600px 600px 600px 600px 600px 600px 600px 350px 350px 600px 600px 150px;
-    grid-template-areas: "header header" "el1 el1" "el2 el2" "el3 el3" "el4 el4" "el5 el5" "el6 el6" "test test" "test test" "el7 el8" "el9 el10" "footer footer" "footer footer";
+    grid-template-rows: repeat(13, auto);
+    grid-template-areas: "header header" "el2 el2" "el1 el1" "el3 el3" "el4 el4" "el5 el5" "el6 el6" "test test" "test test" "el7 el8" "el9 el10" "footer footer" "footer footer";
   }
 
   .testimony {
@@ -259,6 +283,75 @@ header .creative img {
   .testimony .testimony-items .testimony-item .role {
     margin: 20px;
     color: #818498;
+  }
+
+  nav {
+    display: flex;
+    color: white;
+    justify-content: flex-end;
+    /*menu style*/
+  }
+  nav img {
+    margin-top: 20px;
+    margin-left: 1%;
+    margin-right: 1%;
+    height: 20px;
+  }
+  nav p {
+    display: none;
+  }
+  nav .space {
+    margin-right: auto;
+    margin-left: auto;
+  }
+  nav .menu {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  nav .menu-button-container {
+    display: none;
+    height: 100%;
+    width: 30px;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  nav #menu-toggle {
+    display: none;
+  }
+  nav .menu-button,
+nav .menu-button::before,
+nav .menu-button::after {
+    display: block;
+    background-color: #fff;
+    position: absolute;
+    height: 4px;
+    width: 30px;
+    transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    border-radius: 2px;
+  }
+  nav .menu-button::before {
+    content: "";
+    margin-top: -8px;
+  }
+  nav .menu-button::after {
+    content: "";
+    margin-top: 8px;
+  }
+  nav #menu-toggle:checked + .menu-button-container .menu-button::before {
+    margin-top: 0px;
+    transform: rotate(405deg);
+  }
+  nav #menu-toggle:checked + .menu-button-container .menu-button {
+    background: rgba(255, 255, 255, 0);
+  }
+  nav #menu-toggle:checked + .menu-button-container .menu-button::after {
+    margin-top: 0px;
+    transform: rotate(-405deg);
   }
 }
 /*@media screen and (max-width: 1440px)*/
