@@ -295,6 +295,7 @@ header .creative img {
     font-family: "Fraunces", serif;
     color: #a7abae;
     text-align: center;
+    letter-spacing: 0.2em;
   }
   .main-grid .testimony .testimony-items {
     display: flex;
